@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.angular/cache
 
 # Auto-generated environment file (contains API keys)
 src/environments/api-key.ts
