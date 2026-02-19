@@ -2,6 +2,7 @@ import { Component, signal, inject, ElementRef, viewChild } from '@angular/core'
 import { CommonModule, DatePipe } from '@angular/common';
 import { GoogleGenAI, Type } from '@google/genai';
 import { DataService, AnalysisResult, PlantAnalysisRecord } from '../services/data.service';
+import { API_KEY } from '../environments/api-key';
 
 @Component({
   selector: 'app-plant-analyser',
@@ -446,7 +447,7 @@ export class PlantAnalyserComponent {
 
     try {
       // 1. Safe Env Access
-      const apiKey = process.env.API_KEY;
+      const apiKey = API_KEY;
 
       if (!apiKey) {
         throw new Error('API Key is missing in configuration.');

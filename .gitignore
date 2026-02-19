@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Auto-generated environment file (contains API keys)
+src/environments/api-key.ts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
