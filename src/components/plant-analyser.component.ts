@@ -342,16 +342,12 @@ export class PlantAnalyserComponent {
       let height = img.height;
       const maxSize = 800; // Limit max dimension to 800px
 
-      if (width > height) {
-        if (width > maxSize) {
-          height *= maxSize / width;
-          width = maxSize;
-        }
-      } else {
-        if (height > maxSize) {
-          width *= maxSize / height;
-          height = maxSize;
-        }
+      if (width > height && width > maxSize) {
+        height *= maxSize / width;
+        width = maxSize;
+      } else if (height > maxSize) {
+        width *= maxSize / height;
+        height = maxSize;
       }
 
       canvas.width = width;
